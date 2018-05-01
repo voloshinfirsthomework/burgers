@@ -1,0 +1,13 @@
+// config
+@import "config/mixin.scss";
+@import "config/variables.scss";
+
+// base
+@import "layout/fonts.scss";
+@import "layout/base.scss";
+@import "layout/ajustment.scss";
+
+// section
+@import "section/hero.scss";
+@import "section/best.scss";
+@import "section/feed.scss";
