@@ -203,7 +203,8 @@ p {
   flex-wrap: wrap; }
 
 .content-hero__img {
-  width: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +216,9 @@ p {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  max-width: 451px;
+  max-height: 424px; }
 
 .content-hero__h1 {
   display: -webkit-box;
@@ -228,9 +231,10 @@ p {
   line-height: 1.42;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-top: 50px;
+  padding: 50px 0 0 1%;
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%; }
+  flex-basis: 50%;
+  text-align: left; }
 
 .lifehack {
   font-family: lifehack;
@@ -238,3 +242,198 @@ p {
   line-height: 0.9;
   font-size: 65px;
   color: #ffffff; }
+
+.container__hero {
+  text-align: center; }
+
+.scroll__link {
+  display: inline-block; }
+
+.scroll {
+  margin-top: 9%; }
+
+.section--best {
+  background: url(../img/bg/two_img.jpg) center center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.container--best {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.best__icon {
+  width: 97px;
+  height: 89px;
+  margin-bottom: 34px; }
+
+.best__icon--meat {
+  background: url(../img/bg/icons/hand.svg) center center no-repeat; }
+
+.best__icon--hend {
+  background: url(../img/bg/icons/meat.svg) center center no-repeat; }
+
+.best__icon--natural {
+  background: url(../img/bg/icons/natural.svg) center center no-repeat; }
+
+.container--best__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; }
+
+.container--best__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-preferred-size: calc(100% / 3);
+  flex-basis: calc(100% / 3);
+  padding: 2px; }
+
+.container--best__h2 {
+  color: #2f3234;
+  font-family: gaga;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 1.42;
+  text-align: center; }
+
+.container--best__h3 {
+  font-family: "lifehack";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.42;
+  color: #2f3234;
+  text-align: center;
+  margin-bottom: 24px; }
+
+.container--best__description {
+  text-align: center;
+  font-family: 'ubuntu';
+  font-size: 14px;
+  line-height: 1.42;
+  color: #2f3234; }
+
+.section--feed {
+  height: 100vh; }
+
+.section--feed___list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 650px;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.section--feed__item {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  min-width: 120px;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.section--feed__ava {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+.feed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 10%;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  opacity: 0; }
+  .feed:hover {
+    opacity: 1; }
+
+.feed__name {
+  font-size: 14px;
+  font-family: "gaga";
+  color: white;
+  line-height: 2.008; }
+
+.feed__description {
+  font-size: 14px;
+  font-family: "ubuntu";
+  font-weight: 300;
+  color: white;
+  line-height: 1.714; }
+
+.feed__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: "ubuntu";
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: #2f3234;
+  width: 110px;
+  height: 35px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+  .feed__btn:hover {
+    background-color: #1f2122; }

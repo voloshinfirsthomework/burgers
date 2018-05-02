@@ -1,0 +1,90 @@
+.section--feed {
+  height: 100vh;
+}
+
+.section--feed___list {
+  display: flex;
+  min-height: 650px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.section--feed__item {
+  flex-basis: 25%;
+  min-width: 120px;
+  height: 50%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  // &:after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   background-color: rgba(66, 76, 82, 0);
+  //   width: 100%;
+  //   height: 100%;
+  //   &:hover {
+  //     background-color: rgba(66, 76, 82, 0.7);
+  //   }
+  // }
+}
+
+.section--feed__ava {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 10%;
+  height: 100%;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.feed__name {
+  font-size: 14px;
+  font-family: "gaga";
+  color: $white;
+  line-height: 2.008;
+}
+
+.feed__description {
+  font-size: 14px;
+  font-family: "ubuntu";
+  font-weight: 300;
+  color: $white;
+  line-height: 1.714;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+}
+
+.feed__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: "ubuntu";
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: rgb(47, 50, 52);
+  width: 110px;
+  height: 35px;
+  transition: 0.4s;
+  &:hover {
+    background-color: rgb(31, 33, 34);
+  }
+}
