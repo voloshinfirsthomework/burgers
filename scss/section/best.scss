@@ -1,73 +1,74 @@
-.section--best {
+.best {
   background: url(../img/bg/two_img.jpg) center center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--h2 {
+      color: $dark;
+      font-family: gaga;
+      font-weight: 300;
+      font-size: 72px;
+      line-height: 1.42;
+      text-align: center;
+    }
+  }
 }
 
-.container--best {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.best__icon{
-  width: 97px;
-  height: 89px;
-  margin-bottom: 34px;
-}
-
-.best__icon--meat {
-  background: url(../img/bg/icons/hand.svg) center center no-repeat;
-}
-.best__icon--hend {
-  background: url(../img/bg/icons/meat.svg) center center no-repeat;
-}
-.best__icon--natural {
-  background: url(../img/bg/icons/natural.svg) center center no-repeat;
-}
-
-.container--best__list {
+.best-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
   flex-wrap: wrap;
-}
 
-.container--best__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-basis: calc(100% / 3);
-  padding: 2px;
-}
-.container--best__h2 {
-  color: $dark;
-  font-family: gaga;
-  font-weight: 300;
-  font-size: 72px;
-  line-height: 1.42;
-  text-align: center;
-}
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(100% / 3);
+    padding: 2px;
+  }
 
-.container--best__h3 {
-  font-family: "lifehack";
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.42;
-  color: $dark;
-  text-align: center;
-  margin-bottom: 24px;
-}
+  &__icon {
+    width: 97px;
+    height: 89px;
+    margin-bottom: 34px;
+  }
 
-.container--best__description {
-  text-align: center;
-  font-family: 'ubuntu';
-  font-size: 14px;
-  line-height: 1.42;
-  color: $dark;
+  &__icon--meat  {
+    background: url(../img/bg/icons/hand.svg) center center no-repeat;
+  }
 
+  &__icon--hend {
+    background: url(../img/bg/icons/meat.svg) center center no-repeat;
+  }
+
+  &__icon--natural {
+    background: url(../img/bg/icons/natural.svg) center center no-repeat;
+  }
+
+  &__h3 {
+    font-family: "lifehack";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.42;
+    color: $dark;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    text-align: center;
+    font-family: 'ubuntu';
+    font-size: 14px;
+    line-height: 1.42;
+    color: $dark;
+  }
 }
