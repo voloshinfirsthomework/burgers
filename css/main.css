@@ -84,7 +84,8 @@ p {
 
 .wraper {
   width: 100%;
-  height: 100%; }
+  min-height: 100%;
+  overflow: hidden; }
 
 .main-container {
   height: 100%;
@@ -379,18 +380,23 @@ p {
   flex-wrap: wrap;
   position: absolute;
   padding: 10%;
-  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-transition: 0.7s;
-  -o-transition: 0.7s;
-  transition: 0.7s;
-  opacity: 0; }
+  background-color: rgba(68, 71, 73, 0);
+  opacity: 0;
+  -webkit-transition: background-color 0.3s, opacity 0.7s;
+  -o-transition: background-color 0.3s, opacity 0.7s;
+  transition: background-color 0.3s, opacity 0.7s; }
   .feed__review:hover {
+    background-color: rgba(68, 71, 73, 0.5);
     opacity: 1; }
 
 .feed__name {
@@ -423,10 +429,214 @@ p {
   text-transform: uppercase;
   border-radius: 5px;
   background-color: #2f3234;
-  width: 110px;
+  padding: 10px 17px;
   height: 35px;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s; }
   .feed__btn:hover {
     background-color: #1f2122; }
+
+.team {
+  background: url(../img/bg/four.jpg) center center/cover no-repeat;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .team__container {
+    width: 50%;
+    background-color: rgba(77, 81, 83, 0.9);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5%; }
+  .team__content {
+    padding: 10px 0 0 27px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .team__h2 {
+    color: #f9b43b;
+    font-family: gaga;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 1.42;
+    width: 100%; }
+  .team__list {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 100%; }
+  .team__item-active .team__content {
+    height: auto; }
+  .team__item-active .team__h3-name {
+    color: #f9b43b; }
+    .team__item-active .team__h3-name:before {
+      border-bottom: 7px solid #f9b43b;
+      border-top-width: 0px; }
+  .team__h3-name {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "gaga";
+    color: white;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .team__h3-name:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-top: 7px solid #f9b43b;
+      border-bottom-width: 0px;
+      margin-right: 10px; }
+  .team__ava {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden; }
+  .team__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .team__speciality {
+    font-family: "ubuntu";
+    font-weight: bold;
+    font-size: 14px; }
+  .team__desc {
+    padding-left: 27px;
+    font-size: 14px;
+    font-family: "ubuntu";
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+.menu {
+  background: url(../img/bg/menu.jpg) center center/cover no-repeat;
+  color: white;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative; }
+  .menu__word {
+    position: absolute;
+    font-family: "gaga";
+    font-size: 72px;
+    top: 0;
+    left: 0;
+    padding: 11% 0 0 10%; }
+  .menu__acco-menu {
+    min-height: 650px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .menu__acco-item {
+    width: 80px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative; }
+  .menu__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-bottom: 10%;
+    text-decoration: none;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: "gaga";
+    font-size: 40px;
+    -webkit-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    transition: background-color 0.4s; }
+    .menu__link:hover {
+      background-color: rgba(0, 0, 0, 0.7); }
+  .menu__acco-item-meat {
+    background: url(../img/bg/menu_pop/meat.jpg) center center/cover no-repeat; }
+  .menu__acco-item-veg {
+    background: url(../img/bg/menu_pop/veg.jpg) center center/cover no-repeat; }
+  .menu__acco-item-diet {
+    background: url(../img/bg/menu_pop/diet.jpg) center center/cover no-repeat; }
+  .menu .menu__name-menu {
+    -webkit-transform-origin: center left;
+    -ms-transform-origin: center left;
+    transform-origin: center left;
+    -webkit-transform: rotate(-90deg) translateY(68%);
+    -ms-transform: rotate(-90deg) translateY(68%);
+    transform: rotate(-90deg) translateY(68%);
+    z-index: 2; }
+
+.order {
+  background: url(../img/bg/order.jpg) center center/cover no-repeat;
+  color: white; }
+  .order__container {
+    min-height: 650px;
+    width: 100%; }
+  .order__h2 {
+    font-family: "gaga";
+    font-size: 72px;
+    color: #f9b43b; }
+
+.form {
+  width: 100%; }
+  .form__input {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    width: 100%; }
+  .form__col {
+    width: 50%; }
+  .form__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .form__block {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-right: 20px; }
+    .form__block:last-child {
+      margin-right: 0; }
