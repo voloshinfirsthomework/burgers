@@ -1,10 +1,16 @@
 .order {
   background: url(../img/bg/order.jpg) center center / cover no-repeat;
   color: $white;
+  justify-content: center;
   
   &__container {
     min-height: 650px;
+    max-width: 945px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__h2 {
@@ -24,15 +30,25 @@
   }
 
   &__container {
-
+    display: flex;
   }
 
   &__col {
     width: 50%;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   &__row {
     display: flex;
+    margin-top: 18px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
   
   &__block {
@@ -41,6 +57,121 @@
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  &__text-area {
+    width: 100%;
+    height: 107px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+  }
+
+  &__radio {
+    margin-top: 18px;
+    display: flex;
+  }
+
+  &__label-radio {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__cashes {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  &__cahes-active {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $red;
+    opacity: 0;
+  }
+
+  &__input-radio {
+    display: none;
+  }
+
+  &__input-radio:checked + .form__cashes {
+    .form__cahes-active {
+      opacity: 1;
+    }
+  }
+
+  &__checkbox {
+    margin-top: 18px;
+  }
+
+  &__btn {
+    margin-top: 18px;
+  }
+
+  &__btn-order {
+    padding: 10px 17px;
+    background: #e45028;
+    border-radius: 5px;
+    color: $white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.42;
+    text-transform: uppercase;
+    transition: 0.4s;
+
+    &:hover {
+      border-bottom: none;
+      background-color: #ce401a; }
+  }
+
+  &__btn-reset {
+    border: none;
+    background: transparent;
+    color: $white;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.42;
+    text-transform: uppercase;
+  }
+
+  &__label-checkbox {
+    display: inline-flex;
+    align-items: center
+  }
+
+  &__checkbox-stile {
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    margin-right: 8px;
+
+    .form__checkbox-stile-active {
+      background: url(../img/bg/galka.png) center center no-repeat;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+
+  &__input-checkbox {
+    display: none;
+  }
+
+  &__input-checkbox:checked + .form__checkbox-stile {
+
+    .form__checkbox-stile-active {
+      opacity: 1;
     }
   }
 }

@@ -1,0 +1,61 @@
+.footer {
+  background: url(../img/bg/footer.jpg) center center / cover no-repeat;
+  min-height: 58px;
+  margin-top: -58px;
+  font-family: "ubuntu";
+  font-size: 14px;
+  color: $white;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+
+  &__container-footer {
+    min-width: 945px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__number-telefon {
+    font-weight: bold;
+    display: inline-flex;
+    color: $red;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url(../img/bg/icons/phone.svg) center center no-repeat;
+    }
+    &:hover {
+      color: darken($red, 10%);
+      &:before {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.soc-icon {
+  width: 25px;
+  height: 25px;
+  fill: #5a5a5a;
+  display: inline-block;
+  margin-left: 20px;
+  transition: fill 0.3s;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:hover {
+    fill: $white;
+  }
+}

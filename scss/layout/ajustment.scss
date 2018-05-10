@@ -2,6 +2,12 @@
   width: 100%;
   min-height: 100%;
   overflow: hidden;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 58px;
+  }
 }
 
 .main-container {
