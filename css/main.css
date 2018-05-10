@@ -454,9 +454,11 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 5%; }
+    padding: 5% 4% 5% 5%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .team__content {
-    padding: 10px 0 0 27px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -470,7 +472,8 @@ p {
     font-weight: 300;
     font-size: 72px;
     line-height: 1.42;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 30px; }
   .team__list {
     color: white;
     display: -webkit-box;
@@ -481,15 +484,20 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
-    height: 100%; }
-  .team__item-active .team__content {
-    height: auto; }
-  .team__item-active .team__h3-name {
-    color: #f9b43b; }
-    .team__item-active .team__h3-name:before {
-      border-bottom: 7px solid #f9b43b;
-      border-top-width: 0px; }
+    justify-content: space-around; }
+  .team__item {
+    margin-bottom: 30px; }
+  .team__item-active {
+    margin-bottom: 36px; }
+    .team__item-active .team__content {
+      height: auto;
+      margin-left: 17px; }
+    .team__item-active .team__h3-name {
+      color: #f9b43b;
+      margin-bottom: 14px; }
+      .team__item-active .team__h3-name:before {
+        border-bottom: 7px solid #f9b43b;
+        border-top-width: 0px; }
   .team__h3-name {
     text-decoration: none;
     font-size: 14px;
@@ -525,7 +533,7 @@ p {
     font-weight: bold;
     font-size: 14px; }
   .team__desc {
-    padding-left: 27px;
+    padding-left: 20px;
     font-size: 14px;
     font-family: "ubuntu";
     font-weight: 300;
@@ -634,7 +642,8 @@ p {
   .order__h2 {
     font-family: "gaga";
     font-size: 72px;
-    color: #f9b43b; }
+    color: #f9b43b;
+    margin-bottom: 25px; }
 
 .form {
   width: 100%; }
