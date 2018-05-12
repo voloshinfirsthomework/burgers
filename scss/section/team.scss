@@ -8,26 +8,46 @@
     background-color: rgba(77, 81, 83, 0.9); 
     display: flex;
     flex-direction: column;
-    padding: 5% 4% 5% 5%;
+    padding: 5% 7% 5% 5%;
     justify-content: center;
+
+    @include tablets {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      padding: 0 28%;
+    }
+
+    @include phones {
+      padding: 0 18%;
+    }
   }
 
   &__content {
-    // padding: 10px 0 0 27px;
     display: flex;
     height: 0;
     overflow: hidden;
     flex-wrap: wrap;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+
+    }
   }
 
   &__h2 {
     color: $yellow;
     font-family: gaga;
     font-weight: 300;
-    font-size: 72px;
+    font-size: rem(72px);
     line-height: 1.42;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
+
+    @include phones {
+      font-size: rem(50px);
+    }
   }
 
   &__list {
@@ -38,28 +58,32 @@
   }
 
   &__item {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
   }
   &__item-active {
-    margin-bottom: 36px;
+    margin-bottom: rem(36px);
     .team__content {
       height: auto;
-      margin-left: 17px;
+      margin-left: rem(17px);
+
+      @include tablets {
+        margin-left: 0;
+      }
     }
     .team__h3-name {
       color: $yellow;
-      margin-bottom: 14px;
+      margin-bottom: rem(14px);
 
       &:before {
-        border-bottom: 7px solid $yellow;
-        border-top-width: 0px;
+        border-bottom: rem(7px) solid $yellow;
+        border-top-width: rem(0px);
         }
     }
   }
   
   &__h3-name {
     text-decoration: none;
-    font-size: 14px;
+    font-size: rem(14px);
     font-family: "gaga";
     color: $white;
     display: inline-flex;
@@ -69,16 +93,20 @@
       display: block;
       width: 0;
       height: 0;
-      border: 7px solid transparent;
-      border-top: 7px solid $yellow;
-      border-bottom-width: 0px;
-      margin-right: 10px;
+      border: rem(7px) solid transparent;
+      border-top: rem(7px) solid $yellow;
+      border-bottom-width: rem(0px);
+      margin-right: rem(10px);
+    }
+
+    @include tablets {
+      font-size: rem(24px);
     }
   }
   
   &__ava {
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     border-radius: 50%;
     overflow: hidden;
   }
@@ -92,16 +120,20 @@
   &__speciality {
     font-family: "ubuntu";
     font-weight: bold;
-    font-size: 14px;
+    font-size: rem(14px);
   }
 
   &__desc {
-    padding-left: 20px;
-    font-size: 14px;
+    padding-left: rem(20px);
+    font-size: rem(14px);
     font-family: "ubuntu";
     font-weight: 300;
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    @include tablets {
+      padding: 0;
+    }
   }
 }

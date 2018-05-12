@@ -1,7 +1,19 @@
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-style: 16px;
+  font-size: 16px;
   font-family: 'ubuntu', Arial, Helvetica, sans-serif;
   line-height: 1.42;
   color: $dark;
@@ -30,9 +42,9 @@ h1, h2, h3, h4, h5, h6 {
 .visuallyhidden {
   position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem(1px);
+  height: rem(1px);
+  margin: rem(-1px);
   border: 0;
   padding: 0;
 

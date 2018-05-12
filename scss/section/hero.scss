@@ -9,6 +9,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    @include tablets {
+      width: 95%;
+    }
   }
 
   
@@ -34,11 +38,19 @@
   }
 
   &__menu-item {
+
+    @include tablets {
+      display: none;
+      &:last-child {
+        display: inline-block;
+      }
+    }
+
     &:after {
       content: "";
       display: inline-block;
-      @include circle (5px, $white);
-      margin: 0 12px;
+      @include circle (rem(5px), $white);
+      margin: 0 rem(12px);
     }
     &:last-child:after {
       display: none;
@@ -51,22 +63,22 @@
   &__menu-link {
     text-decoration: none;
     color: $white;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 400;
     line-height: 1.42;
     text-transform: uppercase;
     vertical-align: middle;
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: rem(2px) solid rgba(255, 255, 255, 0);
     transition: 0.6s;
     &:hover {
-      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      border-bottom: rem(2px) solid rgba(255, 255, 255, 0.5);
     }
   }
   &__menu-link--order {
-    padding: 10px 17px;
+    padding: rem(10px) rem(17px);
     background: $red;
-    margin-left: 12px;
-    border-radius: 5px;
+    margin-left: rem(12px);
+    border-radius: rem(5px);
     border-bottom: none;
     &:hover {
       border-bottom: none;
@@ -84,14 +96,18 @@
     flex-basis: 50%;
     display: flex;
     justify-content: center;
+
+    @include tablets {
+      flex-basis: 100%;
+    }
   }
 
   &__img-banner {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    max-width: 451px;
-    max-height: 424px;
+    max-width: rem(451px);
+    max-height: rem(424px);
   }
 
   &__h1 {
@@ -99,28 +115,51 @@
     color: $yellow;
     font-family: gaga;
     font-weight: 300;
-    font-size: 72px;
+    font-size: rem(72px);
     line-height: 1.42;
     flex-wrap: wrap;
-    padding: 50px 0 0 1%;
+    padding: rem(50px) 0 0 1%;
     flex-basis: 50%;
     text-align: left;
+
+    @include tablets {
+      text-align: center;
+      justify-content: center;
+      padding: rem(30px) 0 0 0;
+    }
+
+    @include phones {
+      flex-basis: 100%;
+      font-size: rem(63px);
+    }
   }
 
   &__h1-lifehack {
     font-family: lifehack;
     display: inline-block;
     line-height: 0.9;
-    font-size: 65px;
+    font-size: rem(65px);
     color: $white;
+
+    @include phones {
+      font-size: rem(54px);
   }
 }
-
+}
 .scroll {
   margin-top: 9%;
 
   &__link {
     display: inline-block;
   }
-}
 
+  @include tablets {
+    margin-top: rem(130px);
+    margin-bottom: rem(37px);
+  }
+
+  @include phones {
+    margin-top: rem(60px);
+    margin-bottom: rem(32px);
+  }
+}

@@ -9,14 +9,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+
+    @include phones {
+      width: 95%;
+    }
 
     &--h2 {
       color: $dark;
       font-family: gaga;
       font-weight: 300;
-      font-size: 72px;
+      font-size: rem(72px);
       line-height: 1.42;
       text-align: center;
+
+      @include phones {
+        font-weight: rem(50px);
+      }
     }
   }
 }
@@ -25,50 +34,77 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
-  flex-wrap: wrap;
+  margin-top: rem(20px);
+
+  @include phones {
+    flex-direction: column;
+  }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-basis: calc(100% / 3);
-    padding: 2px;
+    padding: rem(2px);
+
+    @include phones {
+      flex-direction: row;
+      margin-bottom: rem(50px);
+    }
   }
 
   &__icon {
-    width: 97px;
-    height: 89px;
-    margin-bottom: 34px;
+    min-width: rem(97px);
+    min-height: rem(89px);
+    margin-bottom: rem(34px);
+
+    @include phones {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @include phones {
+      text-align: left;
+      padding-left: 27px;
+    }
   }
 
   &__icon--meat  {
-    background: url(../img/bg/icons/hand.svg) center center no-repeat;
+    background: url(../img/bg/icons/hand.svg) center center / contain  no-repeat;
   }
 
   &__icon--hend {
-    background: url(../img/bg/icons/meat.svg) center center no-repeat;
+    background: url(../img/bg/icons/meat.svg) center center / contain  no-repeat;
   }
 
   &__icon--natural {
-    background: url(../img/bg/icons/natural.svg) center center no-repeat;
+    background: url(../img/bg/icons/natural.svg) center center / contain no-repeat;
   }
 
   &__h3 {
     font-family: "lifehack";
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 500;
     line-height: 1.42;
     color: $dark;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: rem(24px);
+
+    @include phones {
+      text-align: left;
+    }
   }
 
   &__description {
     text-align: center;
     font-family: 'ubuntu';
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.42;
     color: $dark;
+
+    @include phones {
+      text-align: left;
+    }
   }
 }

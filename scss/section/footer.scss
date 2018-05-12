@@ -1,19 +1,29 @@
 .footer {
   background: url(../img/bg/footer.jpg) center center / cover no-repeat;
-  min-height: 58px;
-  margin-top: -58px;
+  min-height: rem(58px);
+  margin-top: rem(-58px);
   font-family: "ubuntu";
-  font-size: 14px;
+  font-size: rem(14px);
   color: $white;
   font-weight: 300;
   display: flex;
   justify-content: center;
 
   &__container-footer {
-    min-width: 945px;
+    max-width: rem(945px);
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  &__contacts {
+    @include phones {
+      text-align: center;
+    }
   }
 
   &__number-telefon {
@@ -28,15 +38,15 @@
     &:before {
       content: "";
       display: block;
-      width: 20px;
-      height: 20px;
+      width: rem(20px);
+      height: rem(20px);
       background: url(../img/bg/icons/phone.svg) center center no-repeat;
     }
     &:hover {
       color: darken($red, 10%);
       &:before {
-        width: 20px;
-        height: 20px;
+        width: rem(20px);
+        height: rem(20px);
         background-size: cover;
       }
     }
@@ -44,16 +54,12 @@
 }
 
 .soc-icon {
-  width: 25px;
-  height: 25px;
+  width: rem(25px);
+  height: rem(25px);
   fill: #5a5a5a;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: rem(20px);
   transition: fill 0.3s;
-
-  &:first-child {
-    margin-left: 0;
-  }
 
   &:hover {
     fill: $white;

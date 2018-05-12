@@ -2,6 +2,11 @@
 @import "config/mixin.scss";
 @import "config/variables.scss";
 
+// breakpoints
+$tablets: 768px;
+$between: 570px;
+$phones: 480px;
+
 // base
 @import "layout/fonts.scss";
 @import "layout/base.scss";

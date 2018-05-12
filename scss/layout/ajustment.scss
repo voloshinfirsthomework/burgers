@@ -6,13 +6,13 @@
   &:after {
     content: "";
     display: block;
-    height: 58px;
+    height: rem(58px);
   }
 }
 
 .main-container {
   height: 100%;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 .section {
   display: flex;
@@ -21,16 +21,17 @@
 }
 
 .container {
-  min-height: 650px;
-  max-width: 945px;
+  min-height: rem(650px);
+  max-width: rem(945px);
+  width: 100%;
 }
 
 .order-link {
   display: inline-block;
-  margin-left: 15px;
+  margin-left: rem(15px);
   min-width: rem(98px);
   padding: rem(10px) rem(17px);
-  border-radius: 5px;
+  border-radius: rem(5px);
   background-color:  $red;
   color: $white;
   text-decoration: none;

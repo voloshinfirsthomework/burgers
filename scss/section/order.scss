@@ -4,48 +4,72 @@
   justify-content: center;
   
   &__container {
-    min-height: 650px;
-    max-width: 945px;
+    min-height: rem(650px);
+    max-width: rem(945px);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include tablets {
+      width: 95%;
+    }
   }
 
   &__h2 {
     font-family: "gaga";
-    font-size: 72px;
+    font-size: rem(72px);
     color: $yellow;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
+    text-align: center;
   }
 }
 
 .form {
   width: 100%;
+  font-family: "ubuntu";
+  font-weight: 300;
+  font-size: rem(14px);
+  @include tablets {
+    max-width: rem(470px);
+  }
   &__input {
     border: none;
-    border-radius: 5px;
-    padding: 8px 20px;
+    border-radius: rem(5px);
+    padding: rem(8px) rem(20px);
     width: 100%;
   }
 
   &__container {
     display: flex;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__col {
     width: 50%;
-    margin-left: 20px;
+    margin-left: rem(20px);
 
     &:first-child {
       margin-left: 0;
+    }
+
+    @include tablets {
+      margin-left: 0;
+      width: 100%;
+      &:last-child {
+        margin-top: rem(20px);
+      }
     }
   }
 
   &__row {
     display: flex;
-    margin-top: 18px;
+    margin-top: rem(18px);
 
     &:first-child {
       margin-top: 0;
@@ -54,7 +78,7 @@
   
   &__block {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
 
     &:last-child {
       margin-right: 0;
@@ -63,40 +87,44 @@
 
   &__text-area {
     width: 100%;
-    height: 107px;
+    height: rem(107px);
     border: none;
-    border-radius: 5px;
-    padding: 8px 20px;
+    border-radius: rem(5px);
+    padding: rem(8px) rem(20px);
   }
 
   &__radio {
-    margin-top: 18px;
+    margin-top: rem(18px);
     display: flex;
+
+    @include phones {
+      justify-content: center;
+    }
   }
 
   &__label-radio {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: rem(20px);
     &:first-child {
       margin-left: 0;
     }
   }
 
   &__cashes {
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     background-color: $white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
+    margin-right: rem(8px);
   }
 
   &__cahes-active {
-    width: 8px;
-    height: 8px;
+    width: rem(8px);
+    height: rem(8px);
     border-radius: 50%;
     background-color: $red;
     opacity: 0;
@@ -113,21 +141,31 @@
   }
 
   &__checkbox {
-    margin-top: 18px;
+    margin-top: rem(18px);
+
+    @include phones {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__btn {
-    margin-top: 18px;
+    margin-top: rem(18px);
+
+    @include phones {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__btn-order {
-    padding: 10px 17px;
+    padding: rem(10px) rem(17px);
     background: #e45028;
-    border-radius: 5px;
+    border-radius: rem(5px);
     color: $white;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: rem(13px);
+    font-weight: 500;
     line-height: 1.42;
     text-transform: uppercase;
     transition: 0.4s;
@@ -139,12 +177,14 @@
 
   &__btn-reset {
     border: none;
+    outline: none;
     background: transparent;
     color: $white;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: rem(13px);
+    font-weight: 300;
     line-height: 1.42;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   &__label-checkbox {
@@ -153,10 +193,10 @@
   }
 
   &__checkbox-stile {
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     background-color: $white;
-    margin-right: 8px;
+    margin-right: rem(8px);
 
     .form__checkbox-stile-active {
       background: url(../img/bg/galka.png) center center no-repeat;

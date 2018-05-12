@@ -1,8 +1,10 @@
 
 .feed {
+  height: 100vh;
+  min-height: rem(650px);
 
   &__list {
-    min-height: 650px;
+    height: 100%;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -13,7 +15,11 @@
     flex-basis: 25%;
     height: 50%;
     position: relative;
-    border: 1px dashed darkorange;
+
+    @include tablets {
+      flex-basis: 50%;
+      height: 25%;
+    }
   }
 
   &__ava {
@@ -41,39 +47,79 @@
       background-color: rgba(68, 71, 73, 0.5);
       opacity: 1;
     }
+
+    @include tablets {
+      padding: 0 10%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @include between {
+      padding: 0 6%;
+    }
+
+    @include phones {
+      padding: 10%;
+    }
   }
 
   &__name {
-    font-size: 14px;
+    font-size: rem(14px);
     font-family: "gaga";
     color: $white;
     line-height: 2.008;
+
+    @include phones {
+      font-size: rem(24px);
+    }
   }
 
   &__description {
-    font-size: 14px;
+    font-size: rem(14px);
     font-family: "ubuntu";
     font-weight: 300;
     color: $white;
     line-height: 1.714;
+
+    @include between {
+      font-size: rem(13px);
+    }
+
+    @include phones {
+      display: none;
+    }
   }
 
   &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: rem(13px);
+    font-weight: 500;
     font-family: "ubuntu";
     color: $white;
-    text-decoration: none;
+    outline: none;
+    border: none;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: rem(5px);
     background-color: rgb(47, 50, 52);
-    padding: 10px 17px;
-    height: 35px;
+    padding: rem(10px) rem(17px);
+    // height: rem(35px);
     transition: 0.4s;
     &:hover {
       background-color: rgb(31, 33, 34);
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &__btn-phones {
+    display: none;
+
+    @include phones {
+      display: flex;
     }
   }
 }
