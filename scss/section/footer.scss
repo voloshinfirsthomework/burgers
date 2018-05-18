@@ -11,6 +11,7 @@
 
   &__container-footer {
     max-width: rem(945px);
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,5 +64,11 @@
 
   &:hover {
     fill: $white;
+  }
+
+  @include phones {
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }

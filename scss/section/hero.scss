@@ -29,6 +29,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
+    align-items: center;
   }
 
   &__menu-list {
@@ -84,6 +85,36 @@
       border-bottom: none;
       background-color: darken($red, 7%);
       }
+  }
+
+  &__gamburger-menu {
+    width: rem(24px);
+    margin-left: rem(30px);
+    display: none;
+
+    &:hover .header__icon-gamburger-menu .header__gm-element {
+      background-color: darken($white, 20%);
+    }
+
+    @include tablets {
+      display: block;
+    }
+  }
+
+  &__icon-gamburger-menu {
+    width: 100%;
+  }
+
+  &__gm-element {
+    width: 100%;
+    height: 4px;
+    background-color: $white;
+    margin-top: 5px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 .content-hero {
@@ -162,4 +193,14 @@
     margin-top: rem(60px);
     margin-bottom: rem(32px);
   }
+}
+
+.gm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  background-color: #fff;
 }

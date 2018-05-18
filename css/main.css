@@ -176,7 +176,10 @@ p {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-left: auto; }
+    margin-left: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .header__menu-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -226,6 +229,28 @@ p {
     .header__menu-link--order:hover {
       border-bottom: none;
       background-color: #ce401a; }
+  .header__gamburger-menu {
+    width: 1.5rem;
+    margin-left: 1.875rem;
+    display: none; }
+    .header__gamburger-menu:hover .header__icon-gamburger-menu .header__gm-element {
+      background-color: #cccccc; }
+    @media screen and (max-width: 768px) {
+      .header__gamburger-menu {
+        display: block; } }
+  .header__icon-gamburger-menu {
+    width: 100%; }
+  .header__gm-element {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 2px;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s; }
+    .header__gm-element:first-child {
+      margin-top: 0; }
 
 .content-hero {
   display: -webkit-box;
@@ -307,6 +332,15 @@ p {
     .scroll {
       margin-top: 3.75rem;
       margin-bottom: 2rem; } }
+
+.gm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  background-color: #fff; }
 
 .best {
   background: url(../img/bg/two_img.jpg) center center no-repeat;
@@ -707,7 +741,8 @@ p {
     padding: 11% 0 0 8%; }
     @media screen and (max-width: 480px) {
       .menu__word {
-        font-size: 3.125rem; } }
+        font-size: 3.125rem;
+        padding-left: 2%; } }
   .menu__acco-menu {
     min-height: 40.625rem;
     display: -webkit-box;
@@ -991,6 +1026,7 @@ p {
   justify-content: center; }
   .footer__container-footer {
     max-width: 59.0625rem;
+    width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1049,3 +1085,6 @@ p {
   transition: fill 0.3s; }
   .soc-icon:hover {
     fill: white; }
+  @media screen and (max-width: 480px) {
+    .soc-icon:first-child {
+      margin-left: 0; } }
