@@ -197,10 +197,84 @@
 
 .gm {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   height: 0;
-  background-color: #fff;
+  overflow: hidden;
+  background-color: rgba(#2f3234, 0.99);
+  transition: height 0.8s;
+
+  &__menu-link {
+    text-decoration: none;
+    font-family: 'lifehack';
+    font-weight: 100;
+    font-size: rem(20px);
+    color: $white;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &__menu-list {
+    text-align: center;
+  }
+
+  &__menu-item {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      @include circle (rem(10px), $white);
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &__close {
+    width: rem(30px);
+    height: rem(30px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 7%;
+    margin-right: 10%;
+  }
+
+  &__svg-close {
+    width: rem(30px);
+    height: rem(30px);
+    fill: $white;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      fill: $yellow;
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 2% 0 0 2%;
+  }
 }
+
+
