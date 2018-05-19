@@ -288,7 +288,7 @@ p {
     display: -ms-flexbox;
     display: flex;
     color: #f9b43b;
-    font-family: gaga;
+    font-family: 'gaga';
     font-weight: 300;
     font-size: 4.5rem;
     line-height: 1.42;
@@ -350,7 +350,7 @@ p {
   left: 0;
   height: 0;
   overflow: hidden;
-  background-color: rgba(47, 50, 52, 0.99);
+  background-color: rgba(47, 50, 52, 0.9);
   -webkit-transition: height 0.8s;
   -o-transition: height 0.8s;
   transition: height 0.8s; }

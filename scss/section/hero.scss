@@ -144,7 +144,7 @@
   &__h1 {
     display: flex;
     color: $yellow;
-    font-family: gaga;
+    font-family: 'gaga';
     font-weight: 300;
     font-size: rem(72px);
     line-height: 1.42;
@@ -206,7 +206,7 @@
   left: 0;
   height: 0;
   overflow: hidden;
-  background-color: rgba(#2f3234, 0.99);
+  background-color: rgba(#2f3234, 0.9);
   transition: height 0.8s;
 
   &__menu-link {
