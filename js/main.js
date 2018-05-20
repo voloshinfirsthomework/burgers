@@ -9,12 +9,12 @@ gmBtn.addEventListener('click', function(){
   hidden.style.height = '100%';
   wraper.style.height = '100%';
   footer.style.height = '0';
-  footer.style.overflow = 'hidden';
+  footer.style.display = 'none';
 
   close.addEventListener('click', function(){
     hidden.style.height = '0';
     wraper.style.height = 'auto';
     footer.style.height = 'auto';
-    footer.style.overflow = 'visible';
+    footer.style.display = 'flex';
   });
 });
