@@ -22,13 +22,12 @@ gmBtn.addEventListener('click', function () {
 var teamItem = document.querySelector('.team__item');
 var teamName = document.querySelector('.team__h3-name');
 var $item = document.getElementsByClassName('team__item');
-var $teamName = document.getElementsByClassName('team__h3-name');
-qw = 'team__item-active';
+
+
 
 for (i = 0; i < $item.length; i++) {
   teamName.addEventListener('click', function (e) {
     e.preventDefault();
-    // $item[i].classList.remove('team__item');
-    $item[i].classList.add(qw);
+    $item[i].classList.add('.team__item-active');
   });
 };
