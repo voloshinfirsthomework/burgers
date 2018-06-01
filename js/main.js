@@ -19,15 +19,31 @@ gmBtn.addEventListener('click', function () {
   });
 });
 
-var teamItem = document.querySelector('.team__item');
-var teamName = document.querySelector('.team__h3-name');
-var $item = document.getElementsByClassName('team__item');
+var teamItem = document.getElementsByClassName('team__item');
+var teamName = document.getElementsByClassName('team__h3-name');
 
-
-
-for (i = 0; i < $item.length; i++) {
-  teamName.addEventListener('click', function (e) {
+for (i = 0; i < teamName.length; i++) {
+  teamName[i].addEventListener('click', function (e) {
     e.preventDefault();
-    $item[i].classList.add('.team__item-active');
+    if (!(this.parentNode.classList.contains('team__item-active'))) {
+      for (j = 0; j < teamItem.length; j++) {
+        if (teamItem[j].classList.contains('team__item-active')) {
+          teamItem[j].classList.remove('team__item-active');
+        }
+      };
+      this.parentNode.classList.add('team__item-active');
+    };
   });
-};
+}
+
+
+// for (i = 0; i < teamName.length; i++) {
+//   teamName[i].addEventListener('click', function (e) {
+//     e.preventDefault();
+//     var dispNone = document.querySelector('.team__item-active');
+//     var active = this.parentNode;
+
+//     dispNone.classList.add('team__item');
+//     active.classList.toggle('team__item-active');
+//   });
+// };

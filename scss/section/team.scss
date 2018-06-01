@@ -60,10 +60,12 @@
   &__item {
     margin-bottom: rem(30px);
   }
+
   &__item-active {
     margin-bottom: rem(36px);
     .team__content {
-      height: auto;
+      height: 100%;
+      transition: 5s;
       margin-left: rem(17px);
 
       @include tablets {
