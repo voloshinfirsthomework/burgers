@@ -730,9 +730,6 @@ p {
     margin-bottom: 2.25rem; }
     .team__item-active .team__content {
       height: 100%;
-      -webkit-transition: 5s;
-      -o-transition: 5s;
-      transition: 5s;
       margin-left: 1.0625rem; }
       @media screen and (max-width: 768px) {
         .team__item-active .team__content {
