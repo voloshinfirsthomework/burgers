@@ -19,31 +19,31 @@ gmBtn.addEventListener('click', function () {
   });
 });
 
-var teamItem = document.getElementsByClassName('team__item');
-var teamName = document.getElementsByClassName('team__h3-name');
 
-for (i = 0; i < teamName.length; i++) {
-  teamName[i].addEventListener('click', function (e) {
+
+
+$(document).ready(() => {
+
+  $('.team__h3-name').on('click', function (e) {
     e.preventDefault();
-    if (!(this.parentNode.classList.contains('team__item-active'))) {
-      for (j = 0; j < teamItem.length; j++) {
-        if (teamItem[j].classList.contains('team__item-active')) {
-          teamItem[j].classList.remove('team__item-active');
-        }
-      };
-      this.parentNode.classList.add('team__item-active');
-    };
-  });
-}
+    if ($(this).parent().hasClass('team__item-active')) {
+      let iv = $(this).parent().removeClass('team__item-active')
+      iv.find('.team__content').slideUp().css({'opacity': '0'})
+      // iv.find('.team__content').css({'opacity': '0'})
+    } else {
+      if ($(this).parent().hasClass('team__item')) {
+        let iv = $('.team__item-active').removeClass('team__item-active');
+        iv.find('.team__content').slideUp().css({'opacity': '0'})
+        // iv.find('.team__content').css({'opacity': '0'})
+        let v = $(this).parent().addClass('team__item-active')
+        v.find('.team__content').slideDown().css({'opacity': '1'})
+        // v.find('.team__content').css({'opacity': '1'})
+      }
+    }
 
 
-// for (i = 0; i < teamName.length; i++) {
-//   teamName[i].addEventListener('click', function (e) {
-//     e.preventDefault();
-//     var dispNone = document.querySelector('.team__item-active');
-//     var active = this.parentNode;
 
-//     dispNone.classList.add('team__item');
-//     active.classList.toggle('team__item-active');
-//   });
-// };
+
+  })
+
+});
