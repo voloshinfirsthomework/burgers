@@ -28,16 +28,16 @@ $(document).ready(() => {
     e.preventDefault();
     if ($(this).parent().hasClass('team__item-active')) {
       let iv = $(this).parent().removeClass('team__item-active')
-      iv.find('.team__content').slideUp().css({'opacity': '0'})
-      // iv.find('.team__content').css({'opacity': '0'})
+      iv.find('.team__wrap').slideUp().css({'opacity': '0'})
+    
     } else {
       if ($(this).parent().hasClass('team__item')) {
         let iv = $('.team__item-active').removeClass('team__item-active');
-        iv.find('.team__content').slideUp().css({'opacity': '0'})
-        // iv.find('.team__content').css({'opacity': '0'})
+        iv.find('.team__wrap').slideUp().css({'opacity': '0'})
+     
         let v = $(this).parent().addClass('team__item-active')
-        v.find('.team__content').slideDown().css({'opacity': '1'})
-        // v.find('.team__content').css({'opacity': '1'})
+        v.find('.team__wrap').slideDown(1000).css({ 'opacity': '1','transition': 'opacity 5s'})
+    
       }
     }
 

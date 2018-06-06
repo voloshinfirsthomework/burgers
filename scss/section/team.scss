@@ -22,14 +22,17 @@
       padding: 0 18%;
     }
   }
-
-  &__content {
+  &__wrap {
     display: none;
+    overflow: hidden;
     height: 100%;
-    margin-left: rem(17px);
-    flex-wrap: wrap;
-    opacity: 0;
-    transition: opacity 1s;
+    
+  }
+
+  &__content {    
+    display: flex;
+    height: 100%;
+    width: 100%;
 
     @include tablets {
       flex-direction: column;
@@ -65,11 +68,10 @@
   &__item-active {
     margin-bottom: rem(36px);
 
-    .team__content {
+    .team__wrap {
       display: none;
-      
+      // opacity: 1;
 
-      
       @include tablets {
         margin-left: 0;
       }
