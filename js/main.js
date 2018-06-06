@@ -36,7 +36,7 @@ $(document).ready(() => {
         iv.find('.team__wrap').slideUp().css({'opacity': '0'})
      
         let v = $(this).parent().addClass('team__item-active')
-        v.find('.team__wrap').slideDown(1000).css({ 'opacity': '1','transition': 'opacity 5s'})
+        v.find('.team__wrap').slideDown(1000).css({ 'opacity': '1'})
     
       }
     }
