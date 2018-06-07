@@ -28,22 +28,53 @@ $(document).ready(() => {
     e.preventDefault();
     if ($(this).parent().hasClass('team__item-active')) {
       let iv = $(this).parent().removeClass('team__item-active')
-      iv.find('.team__wrap').slideUp().css({'opacity': '0'})
-    
+      iv.find('.team__wrap').slideUp().css({
+        'opacity': '0'
+      })
+
     } else {
       if ($(this).parent().hasClass('team__item')) {
         let iv = $('.team__item-active').removeClass('team__item-active');
-        iv.find('.team__wrap').slideUp().css({'opacity': '0'})
-     
+        iv.find('.team__wrap').slideUp().css({
+          'opacity': '0'
+        })
+
         let v = $(this).parent().addClass('team__item-active')
-        v.find('.team__wrap').slideDown(1000).css({ 'opacity': '1'})
-    
+        v.find('.team__wrap').slideDown(500).css({
+          'opacity': '1'
+        })
+
       }
     }
 
+  });
 
+  $('.menu__link').on('click', function (e) {
+    e.preventDefault();
 
+    if ($(this).parent().next().hasClass('active')) {
+      let deactivation = $(this).parent().next().removeClass('active');
+      deactivation.animate({
+        width: '0px'
+      }, 50);
 
-  })
+    } else {
+      if ($('.menu__description').hasClass('active')) {
+        let deactivation = $('.menu__description').removeClass('active');
+        deactivation.animate({width: '0px'}, 50)
+        let active = $(this).parent().next().addClass('active');
+        active.animate({
+        width: '540px',
+        }, 500);
+      } else {
+        let active = $(this).parent().next().addClass('active');
+        active.animate({
+        width: '540px',
+        
+        }, 500);
+        }
+    }
+
+  });
 
 });

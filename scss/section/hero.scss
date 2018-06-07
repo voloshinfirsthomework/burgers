@@ -43,8 +43,7 @@
   }
 
   &__menu-item {
-   
-
+  
     @include tablets {
       display: none;
       &:last-child {

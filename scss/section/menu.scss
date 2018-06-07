@@ -78,4 +78,29 @@
     transform: rotate(-90deg) translateY(68%);
     z-index: 2;
   }
+
+  &__description {
+    overflow: hidden;
+    background-color: rgba(#2f3234, 0.93);
+    display: block;
+    width: 0;
+  }
+
+  &__span {
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-size: rem(14px);
+    display: flex;
+    width: rem(540px);
+    height: 100%;
+    padding: 60px 32px;
+    justify-content: center;
+    text-align: center;
+  }
+
+}
+
+.active {
+  z-index: 1000;
+  // display: block;
 }
